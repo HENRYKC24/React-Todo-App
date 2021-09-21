@@ -1,19 +1,19 @@
-import React, { Component } from "react";
-import propTypes from "prop-types";
+import React, { Component } from 'react';
+import propTypes from 'prop-types';
 
 class InputTodo extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: "",
-      error: "",
+      title: '',
+      error: '',
     };
   }
 
   onChange = (e) => {
     this.setState({
       [e.target.name]: e.target.value,
-      error: "",
+      error: '',
     });
   };
 
@@ -24,13 +24,13 @@ class InputTodo extends Component {
     if (title.trim()) {
       addTodoProps(title);
       this.setState({
-        title: "",
-        error: "",
+        title: '',
+        error: '',
       });
     } else {
       this.setState({
-        title: "",
-        error: "Please write item",
+        title: '',
+        error: 'Please write item',
       });
     }
   };
