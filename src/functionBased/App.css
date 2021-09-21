@@ -87,6 +87,11 @@ body {
   outline: none;
 }
 
+.error {
+  color: orangered;
+  padding: 10px;
+}
+
 .menuNav {
   overflow-y: scroll;
   list-style: none;
