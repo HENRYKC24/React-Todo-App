@@ -5,7 +5,7 @@ This React to-do application was motivated by a React tutorial.  I followed the 
 ![screenshot](./src/app_screenshot.png)
 
 ## LiveLink
-[LiveLink](https://henrykc24.github.io/Math-Magicians-React-Redux/)
+[LiveLink](https://henrykc24.github.io/React-Todo-App/)
 
 
 ## Available Scripts
