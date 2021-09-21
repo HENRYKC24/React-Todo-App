@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import propTypes from 'prop-types';
 import { FaPlusCircle } from 'react-icons/fa';
 
-const InputTodo = (props) => {
+const InputTodo = ({ addTodoProps }) => {
   const [inputText, setInputText] = useState({
     title: '',
     error: '',
@@ -17,9 +17,10 @@ const InputTodo = (props) => {
   };
 
   const handleSubmit = (e) => {
+    const { title } = inputText;
     e.preventDefault();
-    if (inputText.title.trim()) {
-      props.addTodoProps(inputText.title);
+    if (title.trim()) {
+      addTodoProps(title);
       setInputText({
         title: '',
         error: '',
@@ -32,17 +33,17 @@ const InputTodo = (props) => {
     }
   };
 
-  // useEffect(() => () => console.log('Cleaning up...'), []);
+  const { title, error } = inputText;
 
   return (
     <>
-      <p className="error">{inputText.error}</p>
+      <p className="error">{error}</p>
       <form onSubmit={handleSubmit} className="form-container">
         <input
           type="text"
           className="input-text"
           placeholder="Add todo..."
-          value={inputText.title}
+          value={title}
           name="title"
           onChange={onChange}
         />
